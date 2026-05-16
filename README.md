@@ -12,3 +12,12 @@
 - Create user with ROLE_USER by user with ROLE_USER 
 - Update user with ROLE_USER
 - Delete users by ROLE_ROOT
+
+
+~~~
+composer install
+
+php bin/console doctrine:migrations:migrate
+
+php bin/phpunit
+~~~
