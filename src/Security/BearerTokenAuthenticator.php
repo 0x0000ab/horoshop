@@ -47,7 +47,7 @@ class BearerTokenAuthenticator extends AbstractAuthenticator
 
     private function loadUserFromToken(string $token)
     {
-        $user = $this->userRepository->findByAccessToken(['accessToken' => $token]);
+        $user = $this->userRepository->findByAccessToken($token);
         if (!$user) {
             throw new \Exception('Auth fail. Access token not correct');
         }
